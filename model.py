@@ -9,9 +9,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_score
+import warnings
 import pickle
 
-
+warnings.filterwarnings('ignore')
 from sklearn.preprocessing import LabelEncoder
 
 # read csv
