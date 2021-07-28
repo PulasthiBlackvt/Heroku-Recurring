@@ -2,7 +2,6 @@ Flask
 pandas
 gunicorn
 numpy
-warnings
 pickle
 request
 render_template
