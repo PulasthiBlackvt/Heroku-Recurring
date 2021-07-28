@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Recurring Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="number" name="quirkCategory" placeholder="quirkCategory" required="required" />
+        <input type="number" name="name" placeholder="name" required="required" />
+		<input type="number" name="day" placeholder="day" required="required" />
+		<input type="number" name="iso_currency_code" placeholder="iso_currency_code" required="required" />
+		<input type="number" name="merchant_name" placeholder="merchant_name" required="required" />
+		<input type="number" name="payment_channel" placeholder="payment_channel" required="required" />
+		<input type="number" name="payment_meta" placeholder="payment_meta" required="required" />
+		<input type="number" name="transaction_code" placeholder="transaction_code" required="required" />
+		<input type="number" name="transaction_type" placeholder="transaction_type" required="required" />
+		<input type="number" name="year" placeholder="year" required="required" />
+		<input type="number" name="month" placeholder="month" required="required" />
+		<input type="number" name="amount" placeholder="amount" required="required" />
+		
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+
+
