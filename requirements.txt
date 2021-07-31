@@ -2,5 +2,4 @@ Flask
 pandas
 gunicorn
 numpy
-request
-render_template
+
